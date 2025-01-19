@@ -1,0 +1,40 @@
+.hero-section {
+  background: rgb(251,127,63);
+  background: radial-gradient(circle at top, rgba(251,127,63,1) 30%, rgba(251,151,65,0.9) 40%, rgb(252, 252, 252) 70%);
+  background-blend-mode: normal;
+}
+/* Key Features Section */
+.features-section {
+  background-color: #ffffff;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.feature-content {
+  font-size: 1.125rem; /* Slightly larger text for readability */
+  line-height: 1.6;
+}
+
+.blue-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #4a90e2; /* Vibrant blue color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+@media (min-width: 768px) {
+  .features-section {
+    padding: 80px 40px;
+  }
+  .blue-box {
+    width: 150px;
+    height: 150px;
+  }
+}
