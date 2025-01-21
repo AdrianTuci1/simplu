@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
+import { Mail, MoveRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "./input";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -65,13 +66,23 @@ function Hero() {
               Scopul nostru este de a te ajuta sa iti prezinti afacerea si sa gestionezi serviciile eficient, la un pret accesibil.
             </p>
           </div>
-          <div className="flex flex-row gap-3">
-            <Button size="lg" className="gap-4" variant="outline">
-              Jump on a call <PhoneCall className="w-4 h-4" />
-            </Button>
-            <Button size="lg" className="gap-4">
-              Sign up here <MoveRight className="w-4 h-4" />
-            </Button>
+          <div className="flex items-center justify-center">
+            <div className="flex flex-col md:flex-row items-center gap-2 w-[300px]">
+              <div className="relative w-full">
+                <Input
+                  type="email"
+                  placeholder="Anunta-ma cand e gata."
+                  className="pl-9 py-2 text-sm"
+                />
+                <Mail
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors focus-within:text-blue-500"
+                  size={18}
+                />
+              </div>
+              <Button size="sm" className="w-full md:w-auto px-4 flex items-center gap-2">
+                <Send className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>

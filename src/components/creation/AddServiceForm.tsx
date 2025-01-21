@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import eventEmitter from "../../utils/eventEmitter";
 import ChooseServiceStep from "./steps/ChooseServiceStep";
 import InfoStep from "./steps/InfoStep";
-import PaymentStep from "./steps/PaymentStep";
+import PaymentStep from "./steps/payment-step/PaymentStep";
 
 const AddServiceForm: React.FC<{ closeForm: () => void }> = ({ closeForm }) => {
   const [step, setStep] = useState(1); // Tracks the current step
@@ -84,7 +84,7 @@ const AddServiceForm: React.FC<{ closeForm: () => void }> = ({ closeForm }) => {
             onLocationChange={handleLocationChange}
             onPicturesChange={handlePicturesChange}
           />}
-        {step === 3 && <PaymentStep data={formData} onChange={handleInputChange} />}
+        {step === 3 && <PaymentStep />}
 
         {/* Navigation Buttons */}
         <div className="absolute bottom-2 right-2 flex justify-between flex-end mt-10">

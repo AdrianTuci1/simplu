@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 75px;
+  margin-inline: 75px;
 }
 
 .image-container .image {
@@ -28,14 +28,14 @@
 /* Home presentation image (overlay) */
 .image.home {
   position: absolute;
-  right: 75px;
+  right: 0px;
   z-index: 2; /* Above the dashboard image */
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
 .image.home img {
-  width: 100%;
-  height: 690px;
+  width: auto;
+  height: 700px;
   object-fit: cover;
   opacity: 100; /* Adjust opacity if needed for blending effect */
 }
@@ -44,78 +44,16 @@
 /* Separator line */
 .separator {
   position: absolute;
-  left: 61%;
+  left: 0%;
   bottom: -35px;
-  width: 8px;
+  width: 6px;
   height: 770px; /* Thickness of the separator */
-  background-color: rgb(32, 32, 32); /* Separator color */
+  background-color: rgb(16, 56, 136); /* Separator color */
   z-index: 3; /* Above both images */
   border-radius: 5px;
 }
 
-.separator-handler {
-  position: absolute;
-  z-index: 3;
-  left: 60.1%;
-  bottom: 100px;
-  width: 25px;
-  height: 25px;
-  background: rgb(32, 32, 32);
-  border-radius: 50%;
-}
 
-/* Position controls in bottom-right corner */
-.bottom-right-controls {
-  position: absolute;
-  bottom: 20px;
-  right: 90px;
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-
-.horizontal-switch {
-  display: flex;
-  gap: 10px;
-}
-
-.switch-option {
-  padding: 5px 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #555;
-  background-color: #e0eaf7;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-.switch-option.active {
-  background-color: #007bff;
-  color: white;
-}
-
-.demo-button {
-  padding: 5px 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #007bff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-.demo-button:hover {
-  background-color: #0056b3;
-}
 
 .logo-boxes {
   display: flex;

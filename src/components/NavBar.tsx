@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
         {/* Left Side: Logo and Menu */}
         <div className="flex items-center space-x-6">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-orange-600">
-            simplu.
+          <Link to="/" className="text-2xl font-bold text-orange-600 flex">
+            simplu <img src='/logo-portocaliu.png' alt='logo' style={{width:'30px'}}/>
           </Link>
           <Link to="/about" className="text-gray-700 hover:text-blue-600">
             Despre
