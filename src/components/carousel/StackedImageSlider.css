@@ -25,6 +25,45 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Home presentation image (overlay) */
+.image.home {
+  position: absolute;
+  right: 75px;
+  z-index: 2; /* Above the dashboard image */
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.image.home img {
+  width: 100%;
+  height: 690px;
+  object-fit: cover;
+  opacity: 100; /* Adjust opacity if needed for blending effect */
+}
+
+
+/* Separator line */
+.separator {
+  position: absolute;
+  left: 61%;
+  bottom: -35px;
+  width: 8px;
+  height: 770px; /* Thickness of the separator */
+  background-color: rgb(32, 32, 32); /* Separator color */
+  z-index: 3; /* Above both images */
+  border-radius: 5px;
+}
+
+.separator-handler {
+  position: absolute;
+  z-index: 3;
+  left: 60.1%;
+  bottom: 100px;
+  width: 25px;
+  height: 25px;
+  background: rgb(32, 32, 32);
+  border-radius: 50%;
+}
+
 /* Position controls in bottom-right corner */
 .bottom-right-controls {
   position: absolute;

@@ -49,6 +49,9 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
+  		},
+  		maskImage: {
+  			'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))'
   		}
   	}
   },

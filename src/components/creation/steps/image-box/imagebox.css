@@ -1,0 +1,174 @@
+/* Container for the entire component */
+.clinic-info-container {
+    margin-block-start: 10px;
+    display: block;
+    align-items: stretch;
+    position: relative;
+  }
+  
+  /* Background container */
+  .background-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Background image */
+  .background-container .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Placeholder for when no background image is present */
+  .background-container .background-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #484848;
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    text-align: center;
+    transform: scaleX(-1);
+  }
+
+
+  /* Buttons for background actions */
+  .background-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+    transform: scaleX(-1);
+  }
+  
+  /* Generic action button styling */
+  .action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Hover state for action buttons */
+  .action-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Specific styling for remove button */
+  .remove-button {
+    background-color: #dc3545;
+  }
+  
+  .remove-button:hover {
+    background-color: #b02a37;
+  }
+  
+  /* Content container for positioning logo and other elements */
+  .content-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+  
+  /* Logo container */
+  .content-container .logo-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 130px;
+    height: 130px;
+    background: rgb(37, 37, 37);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  /* Logo image styling */
+  .content-container .logo-container .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  /* Placeholder styling for adding a logo */
+  .logo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    text-align: center;
+  }
+  
+  /* Hidden input styling */
+  .hidden-input {
+    display: none;
+  }
+
+  .rectangle {
+    --r: 30px; /* radius */
+    /* control the cutout */
+    --x: 150px;
+    --y: 150px;
+    /**/
+    transform: rotate(0deg) scaleX(-1);
+    direction: ltr;
+    
+    border-radius: var(--r);
+    --g:/var(--r) var(--r) no-repeat exclude 
+      radial-gradient(100% 100% at 0 0,#0000 100%,#000 calc(100% + 1px));
+    mask:
+      calc(100% - var(--x)) 100% var(--g),100% calc(100% - var(--y)) var(--g),
+      radial-gradient(100% 100% at 100% 100%,#0000 100%,#000 calc(100% + 1px))
+       calc(100% - var(--x) + var(--r)) calc(100% - var(--y) + var(--r))/
+       var(--r) var(--r) no-repeat,
+      conic-gradient(from 90deg at right var(--x) bottom var(--y),#0000 25%,#000 0);
+  }
+
+
+
+.dotted-box {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #1b1b1b;
+    cursor: pointer;
+    text-align: center;
+  }
