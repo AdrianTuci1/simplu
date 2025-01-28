@@ -28,7 +28,7 @@ function Hero() {
         <div className="flex gap-8 py-20 lg:py-20 items-center justify-center flex-col">
           <div>
             <Button variant="secondary" size="sm" className="gap-4">
-              Read our launch article <MoveRight className="w-4 h-4" />
+              Citeste articolul de lansare <MoveRight className="w-4 h-4" />
             </Button>
           </div>
           <div className="flex gap-4 flex-col">
@@ -71,7 +71,7 @@ function Hero() {
               <div className="relative w-full">
                 <Input
                   type="email"
-                  placeholder="Anunta-ma cand e gata."
+                  placeholder="Anunta-ma cand e disponibil."
                   className="pl-9 py-2 text-sm"
                 />
                 <Mail

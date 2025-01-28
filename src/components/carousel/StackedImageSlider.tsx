@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./StackedImageSlider.css";
 import { useSwipeable } from "react-swipeable";
+import { AiOutlineHome } from "react-icons/ai";
+import { MdDashboard } from "react-icons/md";
 
 interface ComparisonItem {
   managementImage: string;
@@ -16,7 +18,7 @@ const StackedImageSlider: React.FC = () => {
   const comparisons: ComparisonItem[] = [
     {
       managementImage: "/prezentare.png",
-      presentationImage: "/acasa.png",
+      presentationImage: "/acasa1.png",
       label: "DENTAL CLINIC",
       logo: "/logoclinic.png",
       address: "https://demo.dental.com",
@@ -38,6 +40,7 @@ const StackedImageSlider: React.FC = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [ showManagement, setShowManagement ] = useState(true);
 
 
   const handleBoxClick = React.useCallback((index: number) => {
@@ -83,34 +86,62 @@ const StackedImageSlider: React.FC = () => {
   
       {/* Main Frame with Swipe Handlers */}
       <div className="frame" {...swipeHandlers}>
-
-        {/* Images */}
-        <div className="image-container" ref={parentRef}>
-      {/* Dashboard Image */}
-      <div className="image dashboard">
+  {/* Images */}
+  <div className="image-container" ref={parentRef}>
+    {/* Conditional Rendering of Images */}
+    {showManagement ? (
+      <div
+        className="image dashboard"
+        style={{
+          height: `${parentHeight}px`,
+        }}
+      >
         <img
           src={comparisons[currentIndex].managementImage}
           alt="Dashboard"
           className="management-image"
+          style={{
+            height: `${parentHeight}px`,
+          }}
         />
       </div>
-
-      {/* Overlay: Home Presentation Image */}
-      <div className="image home"       style={{
-        height: `${parentHeight}px`,}}>
+    ) : (
+      <div
+        className="image home"
+        style={{
+          height: `${parentHeight}px`,
+        }}
+      >
         <img
           src={comparisons[currentIndex].presentationImage}
           alt="Home"
           className="presentation-image"
           style={{
-            height: `${parentHeight}px`,}}
+            height: `${parentHeight}px`,
+          }}
         />
-              {/* Separator Line */}
-      <div className="separator">
       </div>
-      </div>
-      </div>
-    </div>
+    )}
+  </div>
+
+    {/* Button to toggle between images */}
+    <div className="toggle-button">
+    <button
+      className={`toggle-option ${!showManagement ? "active" : ""}`}
+      onClick={() => setShowManagement(false)}
+      aria-label="Show Presentation"
+    >
+      <AiOutlineHome className="icon" />
+    </button>
+    <button
+      className={`toggle-option ${showManagement ? "active" : ""}`}
+      onClick={() => setShowManagement(true)}
+      aria-label="Show Management"
+    >
+      <MdDashboard className="icon" />
+    </button>
+  </div>
+  </div>
   
       {/* Logo Boxes: Positioned Underneath the Images */}
       <div className="logo-boxes">
