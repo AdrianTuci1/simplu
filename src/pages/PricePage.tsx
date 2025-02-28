@@ -4,17 +4,17 @@ export const PAYMENT_FREQUENCIES = ["monthly", "yearly"];
 
 export const TIERS = [
   {
-    id: "starter",
-    name: "Starter",
+    id: "solo",
+    name: "Solo",
     price: {
-      monthly: "Free",
-      yearly: "Free",
+      monthly: 150,
+      yearly: 120,
     },
-    description: "For individuals starting out",
+    description: "Pentru persoane fizice",
     features: [
-      "Basic management dashboard",
-      "5 team member accounts",
-      "10GB storage",
+      "Webiste clienti",
+      "1 singur cont de management",
+      "limita vanzari",
       "Limited reporting tools",
     ],
     cta: "Get started",

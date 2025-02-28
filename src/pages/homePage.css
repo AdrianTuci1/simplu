@@ -1,8 +1,4 @@
-.hero-section {
-  background: rgb(251,127,63);
-  background: radial-gradient(circle at top, rgba(251,127,63,1) 30%, rgba(251,151,65,0.9) 40%, rgb(252, 252, 252) 70%);
-  background-blend-mode: normal;
-}
+
 /* Key Features Section */
 .features-section {
   background-color: #ffffff;

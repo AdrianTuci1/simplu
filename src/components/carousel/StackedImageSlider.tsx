@@ -124,6 +124,7 @@ const StackedImageSlider: React.FC = () => {
     )}
   </div>
 
+    <div className="toggle-wrapper">
     {/* Button to toggle between images */}
     <div className="toggle-button">
     <button
@@ -141,8 +142,10 @@ const StackedImageSlider: React.FC = () => {
       <MdDashboard className="icon" />
     </button>
   </div>
+    </div>
   </div>
   
+    <div className="boxes-wrapper">
       {/* Logo Boxes: Positioned Underneath the Images */}
       <div className="logo-boxes">
         {comparisons.map((comparison, index) => (
@@ -159,6 +162,7 @@ const StackedImageSlider: React.FC = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

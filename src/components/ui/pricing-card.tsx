@@ -1,6 +1,5 @@
 "use client"
 
-import * as React from "react"
 import { BadgeCheck, ArrowRight } from "lucide-react"
 import NumberFlow from "@number-flow/react"
 
@@ -57,7 +56,7 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
             <NumberFlow
               format={{
                 style: "currency",
-                currency: "USD",
+                currency: "ron",
                 trailingZeroDisplay: "stripIfInteger",
               }}
               value={price}
