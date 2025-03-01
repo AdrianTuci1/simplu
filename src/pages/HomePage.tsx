@@ -7,28 +7,25 @@ const Homepage: React.FC = () => {
   return (
     <div className="homepage">
       {/* Hero Section */}
-      <section className="hero-section text-center py-20 bg-gray-100">
-      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-24 py-12">
+      <section className="hero-section text-center bg-gray-100 pt-24">
+      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-24 py-14">
         
         {/* Left Side: Hero Text */}
-        <div className="w-full md:w-1/2 mb-6 md:mb-0 text-center md:text-left">
+        <div className="w-full md:w-1/2 mb-1 md:mb-0 text-center md:text-left">
           <Hero />
         </div>
 
         {/* Right Side: Hero Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center py-0">
           <img 
             src="/hero-simplu.png" 
             alt="Hero Image"
-            className="min-w-[400px] object-cover"
+            className="min-w-[350px] object-cover h-auto"
           />
         </div>
-
       </div>
-
-
-        <StackedImageSlider />
       </section>
+      <StackedImageSlider />
 
       {/* Key Features Section */}
       {/* Features Section */}
@@ -90,7 +87,7 @@ const Homepage: React.FC = () => {
               <img 
                 src="/feature1.png" 
                 alt="Feature preview" 
-                className="absolute top-0 left-10 object-cover object-left h-full w-[100%] md:w-full aspect-3/2"
+                className="absolute top-0 left-10 object-left object-contain h-full w-[100%] md:w-full aspect-5/3"
               />
             </div>
           </div>

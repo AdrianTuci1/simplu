@@ -5,6 +5,7 @@ import About from "./pages/About";
 import DentalClinics from "./pages/DentalClinics";
 import { PricePage } from "./pages/PricePage";
 import DashboardPage from "./pages/dashboard/Dashboard";
+import DemoSelector from "./pages/Demo";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/solutions/dental" element={<DentalClinics />} />
         <Route path="/pricing" element={<PricePage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/demo" element={<DemoSelector />} />
       </Routes>
     </Router>
   );

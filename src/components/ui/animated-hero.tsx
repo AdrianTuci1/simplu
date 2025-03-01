@@ -25,7 +25,7 @@ function Hero() {
   return (
     <div className="w-full">
       <div className="container mx-auto">
-        <div className="flex gap-8 py-20 lg:py-10 items-start justify-start flex-col">
+        <div className="flex gap-8 py-24 lg:py-10 items-start justify-start flex-col">
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-left font-regular">
               <span className="text-spektr-cyan-50">Gestioneaza</span>
@@ -56,7 +56,7 @@ function Hero() {
             </h1>
 
             <p className="text-lg md:text-lg leading-relaxed tracking-tight max-w-xl text-left">
-              Sa ai grija de afacerea nu trebuie sa fie complicat. Toate functiile de care ai nevoie intr-un
+              Sa ai grija de afacerea ta nu trebuie sa fie complicat. Toate functiile de care ai nevoie intr-un
               singur loc.
             </p>
           </div>
