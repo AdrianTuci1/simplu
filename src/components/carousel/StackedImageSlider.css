@@ -1,20 +1,27 @@
-.frame-container {
-  position: relative;
-  width: 100%; /* Takes full width */
+/* Keep general container styles */
+.carousel-container {
+  width: 100%;
   max-width: 100%;
-  overflow: hidden;
-  padding-top: 34px; /* Ensure spacing for chips */
-  padding: 24px;
+  overflow: hidden; /* Prevent scrollbars if track overflows */
+  padding: 24px 0; /* Vertical padding, remove horizontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content like info and logos */
+}
+
+/* Info container (chips) styling */
+.info-container {
+  margin-block-end: 1.5rem;
+  width: 100%; /* Take full width */
+  display: flex; /* Use flex to center chips */
+  justify-content: center;
 }
 
 .feature-chips {
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: center; /* Center chips if they wrap */
 }
 
 .chip {
@@ -26,67 +33,122 @@
   white-space: nowrap;
 }
 
-.frame {
-  position: relative;
-  width: calc(100% - 14px); /* Ensures equal left/right margins */
-  margin: auto;
-  height: 610px;
-  border-radius: 24px;
-  overflow: hidden;
+/* The main viewport for the carousel images */
+.carousel-frame {
+  width: 100%; /* Take full width */
+  overflow: hidden; /* Crucial: hides parts of the track */
+  position: relative; /* Needed for potential absolute positioning inside */
+  height: auto; /* Adjust height based on image content */
+  min-height: 400px; /* Example minimum height */
+  margin-bottom: 1.5rem; /* Space before logo boxes */
 }
 
-.image-frame{
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.image-wrapper {
-  position: absolute;
-  aspect-ratio: 16/9;
-  min-height: 600px;
-  overflow: hidden;
-  padding: 10px;
-  top: 0;
-  left: 0;
-  width: 100%;
+/* The track that holds and moves the items */
+.carousel-track {
+  display: flex; /* Arrange items horizontally */
+  align-items: center; /* Vertically center items if they have different heights */
   height: 100%;
+  /* Smooth transition for the sliding effect */
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform; /* Optimize rendering */
+}
+
+/* Individual item container */
+.carousel-item {
+  flex: 0 0 auto; /* Prevent shrinking/growing, base size is auto */
+  height: 100%; /* Make item take full height of track */
+  display: flex; /* Center image within the item */
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.carousel-item.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Inner container for glass effect */
+.carousel-item-inner {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.carousel-item.active .carousel-item-inner {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* The image itself */
+.carousel-image {
+  display: block; /* Remove extra space below image */
+  /* Define image sizing - adjust as needed */
+  max-height: 500px; /* Example max height */
+  height: auto; /* Maintain aspect ratio */
+  width: auto;  /* Let height control the width */
+  max-width: 80vw; /* Limit width on larger screens */
+  object-fit: contain; /* Ensure whole image is visible */
+  border-radius: 12px; /* Keep the rounded corners */
+}
+
+
+/* Logo navigation styles */
+.logo-boxes {
   display: flex;
   justify-content: center;
-  transition: transform 0.3s ease-in-out;
+  gap: 15px; /* Space between logos */
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.manage-image {
-  height: 100%;
-  width: auto;
-  max-width: none;
-  outline: 2px solid;
-  border-radius: 24px;
+.logo-box {
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
 }
 
-@media (max-width: 1024px) {
-
-  .frame {
-    width: 100%; /* Keeps it responsive */
-
-    background: #73C8A9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-
-  .image-wrapper {
-    width: calc(100% + 14px); /* Ensures right side hides under container */
-    overflow: hidden;
-    justify-content: flex-start;
-    padding: 48px;
-  }
-
+.logo-box.active {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  opacity: 1;
 }
 
 .logo-box-image {
+  display: block;
   width: 48px;
   height: 48px;
+  object-fit: contain;
 }
 
-.info-container{
-  margin-block-end: 1.5rem;
+/* Remove or adjust old/conflicting styles */
+/* Remove .frame, .image-wrapper, .manage-image specific styles if they conflict */
+/* The media query might need adjustment based on the new structure */
+@media (max-width: 768px) {
+  .carousel-image {
+    max-width: 90vw; /* Allow images to be wider on smaller screens */
+  }
+  .chip {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+   .logo-box-image {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-item {
+    padding: 0 10px;
+  }
 }

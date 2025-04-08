@@ -1,0 +1,40 @@
+.content-shrink .main-content {
+  transform: scale(0.95);
+  opacity: 0.8;
+  transition: all 0.5s ease-out;
+}
+
+.beta-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.sliding-text-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliding-text {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: slideText 20s linear infinite;
+  will-change: transform;
+}
+
+.sliding-text > span {
+  padding-right: 4rem;
+  flex-shrink: 0;
+} 

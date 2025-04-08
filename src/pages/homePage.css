@@ -1,4 +1,7 @@
-
+.homepage {
+  border-end-end-radius: 24px;
+  border-end-start-radius: 24px;
+}
 /* Key Features Section */
 .features-section {
   background-color: #ffffff;

@@ -1,0 +1,74 @@
+.highlight-text-section {
+  /* INCREASED Height for longer scroll effect */
+  height: 300vh;
+  position: relative;
+  background-color: #ffffff;
+  /* Increase padding to move the section higher up */
+  padding-top: 0;
+  margin-top: -10vh; /* Negative margin to pull the section up */
+}
+
+.highlight-sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Container for the text lines */
+.highlight-text-block {
+  text-align: left; /* Align text to the left */
+  max-width: 900px; /* Limit overall block width */
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Style each line (span) */
+.highlight-text-line {
+  display: block; /* Each span on its own line */
+  font-size: 3rem; /* Same base style as before */
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0; /* Remove default span margins if any */
+  padding: 0.2em 0; /* Optional vertical padding between lines */
+
+  /* Fix the inverted gradient by swapping colors */
+  background: linear-gradient(to right, #9ca3af 50%, #111827 50%);
+  background-size: 200% 100%;
+  background-position-x: var(--bg-pos-x, 0%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Ensures smooth transition even if scroll is fast */
+  will-change: background-position;
+  transition: background-position-x 0.1s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .highlight-text-block {
+      max-width: 80%;
+  }
+  .highlight-text-line {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .highlight-text-section {
+    height: 300vh;
+    margin-top: -5vh; /* Less negative margin on mobile */
+  }
+  .highlight-text-block {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  .highlight-text-line {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+} 

@@ -1,0 +1,152 @@
+.scrolling-cards-section {
+  position: relative;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column; /* Stack text and grid */
+  align-items: center; /* Center children horizontally */
+  padding-top: 5rem; /* Adjust top padding */
+  padding-bottom: 5rem;
+  /* Remove side padding, handled by grid area width/transform */
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Text Content Area (Above Grid, Aligned Left within its container) */
+.text-content-area {
+  width: 100%; /* Takes full width initially */
+  max-width: 1100px; /* Adjust to control centering and perceived alignment */
+  padding: 0 5%; /* Add padding to control text position relative to viewport edges */
+  box-sizing: border-box;
+  margin-bottom: 4rem; /* Space between text and grid */
+  position: relative; /* Keep in flow */
+  z-index: 10;
+  align-self: center; /* Center the text block */
+  /* Text inside will be left-aligned by default */
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 500px; /* Limit description width */
+}
+
+/* Cards Grid Area (Wider than viewport) */
+.cards-grid-area {
+  width: 115%; /* Make wider to push edges off */
+  position: relative;
+  transform: translateX(-7.5%); /* Center the wider grid */
+  /* margin: 0 auto; This could work too instead of transform */
+}
+
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+  width: 100%; /* Takes full width of the wider container */
+}
+
+.cards-grid-6-cols {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Base Card Styles */
+.card {
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: grab;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card Height Variations */
+.card-small { min-height: 140px; }
+.card-medium { min-height: 190px; }
+.card-large { min-height: 240px; }
+
+/* Vertical offset */
+.cards-column > .card:nth-child(odd) { margin-top: 0rem; }
+.cards-column > .card:nth-child(even) { margin-top: 1rem; }
+.cards-column > .card:only-child { margin-top: 0; }
+
+.card:active { cursor: grabbing; }
+.card-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; color: #111827; }
+.card-content { font-size: 0.9rem; color: #4b5563; line-height: 1.4; }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .scrolling-cards-section {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    min-height: auto;
+    /* Add side padding back */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .text-content-area {
+    max-width: 90%; /* Adjust max-width */
+    padding: 0; /* Reset padding */
+    margin-bottom: 3rem;
+    text-align: center; /* Center text on tablet/mobile */
+  }
+  .section-description {
+     max-width: none; /* Remove max-width limit */
+     margin: 0 auto; /* Center if needed */
+  }
+
+
+  .cards-grid-area {
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  .cards-grid {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .cards-column { gap: 1rem; }
+  .cards-column > .card:nth-child(n) { margin-top: 0; }
+}
+
+@media (max-width: 767px) {
+  .text-content-area {
+    margin-bottom: 2.5rem;
+  }
+  .section-title { font-size: 2rem; }
+  .section-description { font-size: 1rem; }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .card { padding: 1rem; }
+  .card-title { font-size: 0.95rem; }
+  .card-content { font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+} 
