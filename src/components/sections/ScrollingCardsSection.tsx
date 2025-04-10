@@ -65,12 +65,12 @@ const ScrollingCardsSection: React.FC = () => {
 
   // 6 transforms for 6 columns - adjust speeds as desired
   const cardYTransforms = [
-    useTransform(scrollYProgress, [0, 1], [20, -280]),  // Col 1 (Fastest up, starts lower)
-    useTransform(scrollYProgress, [0, 1], [-10, -180]), // Col 2 (Medium fast up)
-    useTransform(scrollYProgress, [0, 1], [0, -80]),   // Col 3 (Slow up)
-    useTransform(scrollYProgress, [0, 1], [-5, -120]),  // Col 4 (Medium slow up)
-    useTransform(scrollYProgress, [0, 1], [10, -220]),  // Col 5 (Fast up)
-    useTransform(scrollYProgress, [0, 1], [30, -260])   // Col 6 (Faster up, starts lower)
+    useTransform(scrollYProgress, [0, 1], [0, -400]),  // Col 1 (Move more upward)
+    useTransform(scrollYProgress, [0, 1], [-10, -180]), // Col 2 (Keep as is)
+    useTransform(scrollYProgress, [0, 1], [-50, 0]),    // Col 3 (Move slightly down)
+    useTransform(scrollYProgress, [0, 1], [0, 100]),    // Col 4 (Move slightly down)
+    useTransform(scrollYProgress, [0, 1], [-10, -180]), // Col 5 (Keep as is)
+    useTransform(scrollYProgress, [0, 1], [0, -400])    // Col 6 (Move more upward)
   ];
 
   // Remove text parallax transform

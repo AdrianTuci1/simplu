@@ -8,7 +8,7 @@ function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto">
           <div className="flex flex-col items-center gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl tracking-tight font-medium text-gray-900">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl tracking-tight font-medium text-gray-900">
               <span>Gestionează afacerea</span>
               <br />
               <span className="text-gray-800">mai simplu ca niciodată</span>

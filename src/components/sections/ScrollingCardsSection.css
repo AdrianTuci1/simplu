@@ -1,6 +1,6 @@
 .scrolling-cards-section {
   position: relative;
-  min-height: 120vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column; /* Stack text and grid */
   align-items: center; /* Center children horizontally */
@@ -16,10 +16,10 @@
 /* Text Content Area (Above Grid, Aligned Left within its container) */
 .text-content-area {
   width: 100%; /* Takes full width initially */
-  max-width: 1100px; /* Adjust to control centering and perceived alignment */
-  padding: 0 5%; /* Add padding to control text position relative to viewport edges */
+  max-width: 900px; /* Adjust to control centering and perceived alignment */
+  padding: 10px 10%; /* Add padding to control text position relative to viewport edges */
   box-sizing: border-box;
-  margin-bottom: 4rem; /* Space between text and grid */
+  margin-bottom: 8rem; /* Space between text and grid */
   position: relative; /* Keep in flow */
   z-index: 10;
   align-self: center; /* Center the text block */
@@ -45,7 +45,7 @@
 .cards-grid-area {
   width: 115%; /* Make wider to push edges off */
   position: relative;
-  transform: translateX(-7.5%); /* Center the wider grid */
+  transform: translateX(-2%); /* Center the wider grid */
   /* margin: 0 auto; This could work too instead of transform */
 }
 

@@ -60,9 +60,8 @@ const HighlightTextSection: React.FC = () => {
     const clampedStart = Math.max(0, start);
     const clampedEnd = Math.min(1, end);
 
-    // Map the calculated progress range [clampedStart, clampedEnd] to background position [0%, 100%]
-    // Note: We're using the same range but the gradient is now reversed in CSS
-    return useTransform(scrollYProgress, [clampedStart, clampedEnd], ['0%', '100%']);
+    // Map the calculated progress range [clampedStart, clampedEnd] back to background position [0%, 100%]
+    return useTransform(scrollYProgress, [clampedStart, clampedEnd], ['100%', '0%']);
   });
   // --- End Recalculation --- 
 
