@@ -86,10 +86,10 @@ const ScrollingCardsSection: React.FC = () => {
       {/* Text Content Area - Now static positioning */}
       {/* Make it a regular div if no other animations planned */}
       <div className="text-content-area">
-        <h2 className="section-title">Un mod nou și ușor de a crea.</h2>
         <p className="section-description">
-          Explorează blocurile predefinite și construiește vizual interfețe complexe fără efort.
+           ✧ Va prezentam blocurile.
         </p>
+        <h2 className="section-title">Un mod nou și ușor de a crea.</h2>
       </div>
 
       {/* Cards Grid Area - Keep wide setup */}

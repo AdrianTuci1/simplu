@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 py-4`}>
-      <div className="container mx-auto px-6 flex justify-between items-center relative">
+      <div className="container mx-auto px-0 flex justify-between items-center relative">
         {/* Left Side: flex-1, content aligned start */}
         <div className="flex-1 flex justify-start items-center space-x-2 z-10">
           <Link to="/" className="flex items-center text-orange-600">
