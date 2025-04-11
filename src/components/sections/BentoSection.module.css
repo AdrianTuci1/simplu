@@ -1,11 +1,11 @@
-.bento-section {
+.bentoSection {
   padding: 6rem 2rem;
   background-color: #f8fafc;
   position: relative;
   overflow: hidden;
 }
 
-.bento-container {
+.bentoContainer {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -13,12 +13,12 @@
   gap: 2rem;
 }
 
-.bento-row {
+.bentoRow {
   display: flex;
   gap: 2rem;
 }
 
-.bento-item {
+.bentoItem {
   background-color: white;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -28,7 +28,7 @@
   overflow: hidden;
 }
 
-.bento-item::before {
+.bentoItem::before {
   content: '';
   position: absolute;
   top: 0;
@@ -40,26 +40,26 @@
   transition: opacity 0.3s ease;
 }
 
-.bento-item:hover {
+.bentoItem:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.bento-item:hover::before {
+.bentoItem:hover::before {
   opacity: 1;
 }
 
-.bento-item.full-width {
+.fullWidth {
   width: 100%;
   min-height: 300px;
 }
 
-.bento-row .bento-item {
+.bentoRow .bentoItem {
   flex: 1;
   min-height: 300px;
 }
 
-.bento-content {
+.bentoContent {
   padding: 2.5rem;
   height: 100%;
   display: flex;
@@ -67,7 +67,7 @@
   justify-content: center;
 }
 
-.bento-title {
+.bentoTitle {
   font-size: 2.5rem;
   font-weight: 700;
   color: #1e293b;
@@ -75,7 +75,7 @@
   line-height: 1.2;
 }
 
-.bento-subtitle {
+.bentoSubtitle {
   font-size: 1.75rem;
   font-weight: 600;
   color: #1e293b;
@@ -83,14 +83,14 @@
   line-height: 1.2;
 }
 
-.bento-description {
+.bentoDescription {
   font-size: 1.125rem;
   color: #64748b;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-.bento-button {
+.bentoButton {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: #3b82f6;
@@ -103,57 +103,149 @@
   align-self: flex-start;
 }
 
-.bento-button:hover {
+.bentoButton:hover {
   background-color: #2563eb;
 }
 
-.bento-button.secondary {
+.secondary {
   background-color: #f1f5f9;
   color: #3b82f6;
 }
 
-.bento-button.secondary:hover {
+.secondary:hover {
   background-color: #e2e8f0;
+}
+
+.twoColumns {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.twoColumns .column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.twoColumns .column:first-child {
+  padding-right: 1rem;
+}
+
+.twoColumns .column:last-child {
+  padding-left: 1rem;
+}
+
+.smallText {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.purpleElement {
+  width: 100%;
+  height: 200px;
+  background-color: #8B5CF6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.twoRows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.twoRows .purpleElement {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+}
+
+.twoRows .bentoDescription {
+  margin: 0;
 }
 
 /* Responsive styles */
 @media (max-width: 1024px) {
-  .bento-section {
+  .bentoSection {
     padding: 4rem 1.5rem;
   }
   
-  .bento-title {
+  .bentoTitle {
     font-size: 2rem;
   }
   
-  .bento-subtitle {
+  .bentoSubtitle {
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 768px) {
-  .bento-row {
+@media (min-width: 768px) {
+  .bentoItem.fullWidth .bentoContent {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .bentoItem.fullWidth .bentoContent {
     flex-direction: column;
   }
   
-  .bento-item, 
-  .bento-item.full-width {
+  .bentoRow {
+    flex-direction: column;
+  }
+  
+  .bentoItem, 
+  .fullWidth {
     min-height: auto;
   }
   
-  .bento-content {
+  .bentoContent {
     padding: 2rem;
   }
   
-  .bento-title {
+  .bentoTitle {
     font-size: 1.75rem;
   }
   
-  .bento-subtitle {
+  .bentoSubtitle {
     font-size: 1.25rem;
   }
   
-  .bento-description {
+  .bentoDescription {
     font-size: 1rem;
+  }
+  
+  .twoColumns {
+    flex-direction: column;
+  }
+  
+  .twoColumns .column {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .twoColumns .column:first-child,
+  .twoColumns .column:last-child {
+    padding: 0;
+  }
+  
+  .twoRows .purpleElement {
+    height: 120px;
   }
 } 

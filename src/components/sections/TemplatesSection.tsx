@@ -21,13 +21,13 @@ const TemplatesSection = () => {
   ];
 
   const categories = [
-    "Pitch decks",
-    "All hands",
-    "Investor update",
-    "Product roadmap",
-    "Research findings",
-    "Marketing strategy",
-    "North star goals"
+    "Website de Prezentare",
+    "Program de Management",
+    "Integrare POS",
+    "Integrare E-factura",
+    "Recomandari",
+    "Marketing Digital",
+    "Automatizari"
   ];
 
   return (

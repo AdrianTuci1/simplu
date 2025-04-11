@@ -1,43 +1,65 @@
 import React from 'react';
-import './BentoSection.css';
+import styles from './BentoSection.module.css';
 
 const BentoSection: React.FC = () => {
   return (
-    <section className="bento-section">
-      <div className="bento-container">
+    <section className={styles.bentoSection}>
+      <div className={styles.bentoContainer}>
         {/* First row - full width */}
-        <div className="bento-item full-width">
-          <div className="bento-content">
-            <h2 className="bento-title">Soluții personalizate pentru afacerea ta</h2>
-            <p className="bento-description">
-              Platforma noastră se adaptează nevoilor specifice ale afacerii tale,
-              oferind funcționalități dedicate pentru fiecare domeniu.
-            </p>
-            <button className="bento-button">Află mai multe</button>
+        <div className={`${styles.bentoItem} ${styles.fullWidth}`}>
+          <div className={`${styles.bentoContent} ${styles.twoColumns}`}>
+            <div className={styles.column}>
+              <span className={styles.smallText}> ✧ VEZI INFORMATIILE</span>
+              <h3 className={styles.bentoSubtitle}>Design de top accesibil tuturor</h3>
+              <p className={styles.bentoDescription}>
+                Componentele sunt create cu precizie pentru a oferi o experiență plăcută și intuitivă clienților tăi.
+              </p>
+            </div>
+            <div className={styles.column}>
+              <div className={styles.purpleElement}>
+                Element Mov
+              </div>
+            </div>
           </div>
         </div>
         
         {/* Second row - two windows */}
-        <div className="bento-row">
-          <div className="bento-item">
-            <div className="bento-content">
-              <h3 className="bento-subtitle">Gestionare simplificată</h3>
-              <p className="bento-description">
-                Administrează programări, clienți și resurse într-un singur loc,
-                fără complicații.
-              </p>
-              <button className="bento-button secondary">Explorează</button>
+        <div className={styles.bentoRow}>
+          <div className={styles.bentoItem}>
+            <div className={styles.bentoContent}>
+              <div className={styles.twoRows}>
+                <div>
+                  <div className={styles.purpleElement}>
+                    Element Mov
+                  </div>
+                </div>
+                <div>
+                <span className={styles.smallText}> ✧ ADMINISTRARE</span>
+                <h3 className={styles.bentoSubtitle}>Usor de administrat. <br/> Greu de gresit.</h3>
+                  <p className={styles.bentoDescription}>
+                    Administreaza programari, clienti si resurse intr-un singur loc, fara complicatii.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div className="bento-item">
-            <div className="bento-content">
-              <h3 className="bento-subtitle">Analiză avansată</h3>
-              <p className="bento-description">
-                Obține insights valoroase despre performanța afacerii tale
-                cu rapoarte detaliate și statistici în timp real.
-              </p>
-              <button className="bento-button secondary">Vezi exemple</button>
+          <div className={styles.bentoItem}>
+            <div className={styles.bentoContent}>
+              <div className={styles.twoRows}>
+                <div>
+                  <div className={styles.purpleElement}>
+                    Element Mov
+                  </div>
+                </div>
+                <div>
+                  <span className={styles.smallText}> ✧ INTEGRARE</span>
+                  <h3 className={styles.bentoSubtitle}>O fereastra catre munca ta</h3>
+                  <p className={styles.bentoDescription}>
+                    Sistemul nostru inteligent poate prelua rezervari, analiza preturi si promova afacerea.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

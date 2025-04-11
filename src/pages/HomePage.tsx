@@ -5,11 +5,11 @@ import StackedImageSlider from "@/components/carousel/StackedImageSlider";
 import ScrollingCardsSection from "@/components/sections/ScrollingCardsSection";
 import HighlightTextSection from "@/components/sections/HighlightTextSection";
 import BentoSection from "@/components/sections/BentoSection";
-import DeploymentBentoSection from "@/components/sections/DeploymentBentoSection";
 import TemplatesSection from "@/components/sections/TemplatesSection";
 import MobileExperienceSection from "@/components/sections/MobileExperienceSection";
 import PricingSection from "@/components/sections/PricingSection";
 import BetaSection from "@/components/sections/BetaSection";
+import DeploymentBentoSection from "@/components/sections/DeploymentBentoSection";
 
 const Homepage: React.FC = () => {
   return (

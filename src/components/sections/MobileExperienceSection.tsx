@@ -6,13 +6,13 @@ const MobileExperienceSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center gap-2 mb-6">
           <Sparkles className="w-6 h-6 text-purple-500" />
-          <h2 className="text-lg font-medium text-purple-500">Mobile experience</h2>
+          <h2 className="text-lg font-medium text-purple-500">Experienta mobila</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Present anywhere. Anytime.
+              Prezent oriunde. Oricand.
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Transformă-ți prezentările într-un format optimizat pentru orice dispozitiv. 

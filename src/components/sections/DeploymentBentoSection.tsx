@@ -1,27 +1,27 @@
 import React from 'react';
 import { Rocket, Layout, Globe, Shield } from 'lucide-react';
-import './BentoSection.css';
+import styles from './DeploymentBentoSection.module.css';
 
 const DeploymentBentoSection: React.FC = () => {
   return (
-    <section className="bento-section bg-white py-20">
-      <div className="bento-container">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Deployments made easy</h2>
-          <p className="text-xl text-gray-600">Deploy with ease, leave complexities to us.</p>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>Deployments made easy</h2>
+          <p className={styles.subtitle}>Deploy with ease, leave complexities to us.</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className={styles.grid}>
           {/* First row - first card */}
-          <div className="bento-item bg-gradient-to-br from-green-50 to-green-100">
-            <div className="bento-content">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl shadow-sm">
-                  <Rocket className="w-8 h-8 text-green-600" />
+          <div className={styles.cardGreen}>
+            <div className={styles.cardContent}>
+              <div className={styles.cardHeader}>
+                <div className={styles.iconContainer}>
+                  <Rocket style={{ width: '2rem', height: '2rem', color: '#16a34a' }} />
                 </div>
-                <h3 className="bento-subtitle">Lansare în 3 pași simplii</h3>
+                <h3 className={styles.cardTitle}>Lansare în 3 pași simplii</h3>
               </div>
-              <p className="bento-description">
+              <p className={styles.cardDescription}>
                 1. Încarcă codul tău<br/>
                 2. Configurează domeniul<br/>
                 3. Apasă "Lansează"
@@ -30,45 +30,45 @@ const DeploymentBentoSection: React.FC = () => {
           </div>
           
           {/* First row - second card */}
-          <div className="bento-item bg-gradient-to-br from-purple-50 to-purple-100">
-            <div className="bento-content">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl shadow-sm">
-                  <Layout className="w-8 h-8 text-purple-600" />
+          <div className={styles.cardPurple}>
+            <div className={styles.cardContent}>
+              <div className={styles.cardHeader}>
+                <div className={styles.iconContainer}>
+                  <Layout style={{ width: '2rem', height: '2rem', color: '#9333ea' }} />
                 </div>
-                <h3 className="bento-subtitle">Design Intuitiv</h3>
+                <h3 className={styles.cardTitle}>Design Intuitiv</h3>
               </div>
-              <p className="bento-description">
+              <p className={styles.cardDescription}>
                 Interfață prietenoasă care te ghidează prin fiecare pas al procesului de lansare.
               </p>
             </div>
           </div>
 
           {/* Second row - first card */}
-          <div className="bento-item bg-gradient-to-br from-blue-50 to-blue-100">
-            <div className="bento-content">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl shadow-sm">
-                  <Globe className="w-8 h-8 text-blue-600" />
+          <div className={styles.cardBlue}>
+            <div className={styles.cardContent}>
+              <div className={styles.cardHeader}>
+                <div className={styles.iconContainer}>
+                  <Globe style={{ width: '2rem', height: '2rem', color: '#2563eb' }} />
                 </div>
-                <h3 className="bento-subtitle">Domeniu Propriu</h3>
+                <h3 className={styles.cardTitle}>Domeniu Propriu</h3>
               </div>
-              <p className="bento-description">
+              <p className={styles.cardDescription}>
                 Conectează-ți propriul domeniu sau alege unul nou direct din platformă.
               </p>
             </div>
           </div>
 
           {/* Second row - second card */}
-          <div className="bento-item bg-gradient-to-br from-orange-50 to-orange-100">
-            <div className="bento-content">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl shadow-sm">
-                  <Shield className="w-8 h-8 text-orange-600" />
+          <div className={styles.cardOrange}>
+            <div className={styles.cardContent}>
+              <div className={styles.cardHeader}>
+                <div className={styles.iconContainer}>
+                  <Shield style={{ width: '2rem', height: '2rem', color: '#ea580c' }} />
                 </div>
-                <h3 className="bento-subtitle">Securitate avansată</h3>
+                <h3 className={styles.cardTitle}>Securitate avansată</h3>
               </div>
-              <p className="bento-description">
+              <p className={styles.cardDescription}>
                 SSL gratuit, protecție DDoS și monitorizare continuă pentru site-ul tău.
               </p>
             </div>
