@@ -4,11 +4,7 @@ import './HighlightTextSection.css'; // Create this CSS file
 
 // Define the text lines
 const textLines = [
-  "Construiește experiențe digitale remarcabile.",
-  "Platforma noastră îți oferă uneltele",
-  "și flexibilitatea necesare pentru a inova",
-  "rapid și eficient, transformând",
-  "viziunile complexe în realitate."
+  "Construiește experiențe digitale remarcabile. Platforma noastră îți oferă uneltele, și flexibilitatea necesare pentru a inova, rapid și eficient, transformând, viziunile complexe în realitate."
 ];
 
 interface HighlightSpanProps {

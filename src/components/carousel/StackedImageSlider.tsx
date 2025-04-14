@@ -23,7 +23,7 @@ const comparisons: ComparisonItem[] = [
     address: "https://demo.fitness.com",
   },
   {
-    managementImage: "/salon-soon.png",
+    managementImage: "/gym.png",
     label: "Hotel Management",
     logo: "/salon-manager.png",
     address: "https://demo.hotel.com",
