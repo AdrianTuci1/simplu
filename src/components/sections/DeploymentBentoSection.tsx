@@ -1,5 +1,4 @@
 import React from 'react';
-import { Rocket, Layout, Globe, Shield } from 'lucide-react';
 import styles from './DeploymentBentoSection.module.css';
 import ChromeWindow from '@/components/ui/ChromeWindow';
 import ConnectedSteps from '@/components/ui/ConnectedSteps';
@@ -17,12 +16,9 @@ const DeploymentBentoSection: React.FC = () => {
             <div className={styles.cardGreen}>
               <div className={styles.cardContent}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.iconContainer}>
-                    <Rocket style={{ width: '2rem', height: '2rem', color: '#16a34a' }} />
-                  </div>
-                  <h3 className={styles.cardTitle}>Lansare în 3 pași simplii</h3>
+                  <h3 className={styles.cardTitle}>Disponibilitate imediata</h3>
                 </div>
-                <p className={styles.cardDescription}>Lasa complicatiile in seama noastra si incepe sa lucrezi in doar 3 pasi.</p>
+                <p className={styles.cardDescription}>Creeaza o prezenta online in doar cateva minute.</p>
                 <div className="mt-4">
                   <ConnectedSteps />
                 </div>
@@ -33,9 +29,6 @@ const DeploymentBentoSection: React.FC = () => {
             <div className={styles.cardPurple}>
               <div className={styles.cardContent}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.iconContainer}>
-                    <Layout style={{ width: '2rem', height: '2rem', color: '#9333ea' }} />
-                  </div>
                   <h3 className={styles.cardTitle}>Design Intuitiv</h3>
                 </div>
                 <p className={styles.cardDescription}>
@@ -53,9 +46,6 @@ const DeploymentBentoSection: React.FC = () => {
             <div className={styles.cardBlue}>
             <div className={styles.cardContent}>
             <div className={styles.cardHeader}>
-              <div className={styles.iconContainer}>
-                <Shield style={{ width: '2rem', height: '2rem', color: '#ea580c' }} />
-              </div>
               <h3 className={styles.cardTitle}>Securitate avansată</h3>
             </div>
             <p className={styles.cardDescription}>
@@ -71,9 +61,6 @@ const DeploymentBentoSection: React.FC = () => {
             <div className={styles.cardOrange}>
             <div className={styles.cardContent}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.iconContainer}>
-                    <Globe style={{ width: '2rem', height: '2rem', color: '#2563eb' }} />
-                  </div>
                   <h3 className={styles.cardTitle}>Domeniu Propriu</h3>
                 </div>
                 <p className={styles.cardDescription}>
